@@ -58,7 +58,7 @@ app.post("/api/ask-ai", async (req, res) => {
   },
   {
     headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,x 
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
     },
   },
