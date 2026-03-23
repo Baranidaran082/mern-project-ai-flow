@@ -15,7 +15,7 @@ function App() {
 
   const handleRun = async (text) => {
     setPromptText(text); //store prompt
-    const res = await axios.post("http://localhost:5000/api/ask-ai", {
+    const res = await axios.post("https://mern-project-ai-flow.onrender.com/api/ask-ai", {
       prompt: text,
     });
 
@@ -25,7 +25,7 @@ function App() {
 
 
   const handleSave = async () => {
-  await axios.post("http://localhost:5000/api/save", {
+  await axios.post("https://mern-project-ai-flow.onrender.com/api/save", {
     prompt: promptText,
     response: result,
   });
