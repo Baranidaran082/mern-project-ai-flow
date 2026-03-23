@@ -1,0 +1,23 @@
+.result-node {
+  padding: 12px;
+  border: 2px solid #333;
+  background: #f9f5d7;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.result-node h4 {
+  margin-bottom: 8px;
+}
+
+.result-box {
+  height: 400px;
+  overflow-y: auto;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.result-node button {
+  padding: 6px 12px;
+  cursor: pointer;
+}

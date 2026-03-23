@@ -1,0 +1,23 @@
+.input-node {
+  padding: 12px;
+  border: 2px solid #333;
+  background: #ffffff;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+}
+
+.input-node h4 {
+  margin-bottom: 8px;
+}
+
+.input-node input {
+  padding: 5px;
+  margin-right: 5px;
+  width: 120px;
+}
+
+.input-node button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
