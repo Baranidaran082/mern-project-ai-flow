@@ -43,6 +43,7 @@ app.post("/api/save", async (req, res) => {
 
 app.post("/api/ask-ai", async (req, res) => {
   try {
+    console.log("KEY:", process.env.OPENROUTER_API_KEY);
     const { prompt } = req.body;
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
@@ -57,7 +58,7 @@ app.post("/api/ask-ai", async (req, res) => {
   },
   {
     headers: {
-      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,x 
       "Content-Type": "application/json",
     },
   },
