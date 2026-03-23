@@ -46,11 +46,11 @@ app.post("/api/ask-ai", async (req, res) => {
     console.log("KEY:", process.env.OPENROUTER_API_KEY);
     const { prompt } = req.body;
     const response = await axios.post(
-      "https://openrouter.ai/api/v1/chat/completions",
+  "https://openrouter.ai/api/v1/chat/completions",
+  {
+    model: "openrouter/free",
+    messages: [
       {
-        model: "openrouter/free", //AUTO SELECT FREE MODEL
-        messages: [
-        {
         role: "user",
         content: prompt,
       },
@@ -60,8 +60,10 @@ app.post("/api/ask-ai", async (req, res) => {
     headers: {
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
+      "HTTP-Referer": "https://mern-project-ai-flow.vercel.app", // 🔥 REQUIRED
+      "X-Title": "MERN AI Flow App" // 🔥 REQUIRED
     },
-  },
+  }
 );
 console.log(response.data)
 const result = response.data.choices[0].message.content;
