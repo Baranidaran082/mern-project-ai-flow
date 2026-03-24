@@ -2,18 +2,18 @@
  
 A full-stack MERN application where users type a prompt into an AI-powered flow canvas, receive an AI-generated response, and save it to MongoDB. The saved response is displayed live on a separate preview page.
  
-**Live Application:** [https://mern-project-ai-flow.vercel.app](https://mern-project-ai-flow.vercel.app)  
-**Backend API:** [https://mern-project-ai-flow.onrender.com](https://mern-project-ai-flow.onrender.com)
+ **Live Application:** [https://mern-project-ai-flow.vercel.app](https://mern-project-ai-flow.vercel.app)  
+ **Backend API:** [https://mern-project-ai-flow.onrender.com](https://mern-project-ai-flow.onrender.com)
  
 ---
  
 ## ✨ Features
  
--  AI-powered prompt generation using OpenRouter
--  Interactive flow UI with React Flow
--  Save prompts & responses to MongoDB Atlas
--  Live preview of saved data
--  Fully deployed (Vercel + Render)
+- AI-powered prompt generation using OpenRouter
+- Interactive flow UI with React Flow
+- Save prompts & responses to MongoDB Atlas
+- Live preview of saved data
+- Fully deployed (Vercel + Render)
  
 ---
  
@@ -31,7 +31,7 @@ A full-stack MERN application where users type a prompt into an AI-powered flow 
 ###  Option 1: Use the Live App (Recommended)
  
 [https://mern-project-ai-flow.vercel.app](https://mern-project-ai-flow.vercel.app)
- 
+
 ---
  
 ###  Option 2: Run Locally
@@ -67,7 +67,7 @@ Backend runs at: `http://localhost:5000`
  
 ---
  
-**Run Frontend**
+**3️⃣ Run Frontend**
  
 ```bash
 cd client
@@ -79,7 +79,7 @@ Frontend runs at: `http://localhost:3000`
  
 ---
  
-## Important Note
+##  Important Note
  
 - The frontend is configured to send API requests to `http://localhost:5000`
 - Make sure the backend is running **before** using the frontend locally
