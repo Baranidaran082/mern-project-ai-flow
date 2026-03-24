@@ -4,14 +4,16 @@ import "./ResultNode.css";
 
 function ResultNode({ data }) {
   return (
-    <div
-       className="result-node"
-    >
+    <div className="result-node">
       {/* INPUT handle */}
       <Handle type="target" position={Position.Left} />
-
-      <div className="result-box">
-          <ReactMarkdown >{data.result}</ReactMarkdown>
+            <div
+              className="result-box nowheel nodrag"  
+              onWheel={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+              >
+        <ReactMarkdown>{data.result}</ReactMarkdown>
       </div>
 
 
