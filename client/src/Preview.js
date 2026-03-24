@@ -6,7 +6,7 @@ function Preview() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/get-data")
+    axios.get("https://mern-project-ai-flow.onrender.com/api/get-data")
       .then(res => setData(res.data))
       .catch(err => console.log(err));
   }, []);
