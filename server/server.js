@@ -48,7 +48,7 @@ app.post("/api/ask-ai", async (req, res) => {
     const response = await axios.post(
   "https://openrouter.ai/api/v1/chat/completions",
   {
-    model: "meta-llama/llama-3-8b-instruct",
+    model: "openrouter/free",
     messages: [
       {
         role: "user",
@@ -69,8 +69,17 @@ console.log(response.data)
 const result = response.data.choices[0].message.content;
 res.json({ result });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: "Something went wrong" });
+    // 🔥 This will show the EXACT error in Render logs
+    console.error("=== OPENROUTER ERROR ===");
+    console.error("Status:", error?.response?.status);
+    console.error("Message:", error?.response?.data);
+    console.error("Raw:", error.message);
+    console.error("=======================");
+
+    res.status(500).json({ 
+      error: "AI request failed",
+      details: error?.response?.data || error.message  // 👈 also sends error to frontend
+    });
   }
 });
 
